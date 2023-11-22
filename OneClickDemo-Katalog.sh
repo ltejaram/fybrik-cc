@@ -419,7 +419,7 @@ client = fl.connect('${ENDPOINT_CONNECTION}')
 request = {
     "asset": "fybrik-notebook-sample/paysim-csv",
     # To request specific columns add to the request a "columns" key with a list of column names
-    "columns": ["type","amount", "oldbalanceOrg", "isFraud"]
+    "columns": ["type","amount", "oldbalanceOrg", "isFraud","nameDest"]
 }
 # Send request and fetch result as a pandas DataFrame
 info = client.get_flight_info(fl.FlightDescriptor.for_command(json.dumps(request)))
